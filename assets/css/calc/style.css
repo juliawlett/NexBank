@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+}
+
+.MenuNavbar {
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 29px 7px rgb(216, 216, 216);
+    -moz-box-shadow: 0px 0px 29px 7px rgba(216, 216, 216);
+    box-shadow: 0px 0px 29px 7px rgba(216, 216, 216);
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.Left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4B0082;
+
+    .iconebank {
+        font-size: 29px;
+        margin-right: 10px;
+    }
+}
+
+.Right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+
+    .iconebank {
+        margin-right: 10px;
+    }
+}
+
+.Right:hover {
+    color: #4B0082;
+}
+
+.SaldoBank {
+    background-color: rgb(250, 250, 250);
+    padding: 20px 40px 20px 40px;
+    width: 92%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 1px dashed rgba(0, 0, 0, 0.349);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #saldo {
+        color: #4B0082;
+        font-weight: 700;
+    }
+
+    #limparHistorico {
+        background-color: #4B0082;
+        padding: 6px 20px;
+        border: none;
+        color: white;
+        font-family: "Questrial", sans-serif;
+        border-radius: 5px;
+    }
+
+    .iconrefresh {
+        margin: 0;
+        margin-right: 5px;
+    }
+}
+
+.formehistorico {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 20px 40px;
+
+    .LeftForm,
+    .RightHistorico {
+        width: 46%;
+    }
+
+    .LeftForm form {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(250, 250, 250);
+        padding: 50px;
+        border: 1px dashed rgba(0, 0, 0, 0.349);
+    }
+
+    .LeftForm form .Input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+    }
+
+    .LeftForm form .Input label {
+        font-family: "Questrial", sans-serif;
+        color: #4B0082;
+        margin-bottom: 5px;
+    }
+
+    .LeftForm form .Input input,
+    .LeftForm form .Input select {
+        background-color: #f1f1f175;
+        border: none;
+        padding: 5px;
+        border-bottom: 1px #4B0082 solid;
+    }
+
+    .LeftForm form .Input input::placeholder,
+    .LeftForm form .Input select {
+        padding-left: 10px;
+        color: rgb(175, 175, 175);
+
+    }
+
+    .LeftForm form .Input select option {
+        color: #4B0082;
+    }
+
+    button {
+        background-color: #4B0082;
+        border: none;
+        color: white;
+        padding: 10px;
+        font-family: "Questrial", sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s all ease;
+    }
+
+    button:hover {
+        background-color: #5c039b;
+    }
+}
+
+.RightHistorico {
+    height: 401;
+    max-height: 401;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(250, 250, 250);
+    padding: 50px;
+    border: 1px dashed rgba(0, 0, 0, 0.349);
+
+
+    .HistoricoEOpcoes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .RightResumo{
+        display: flex;
+
+        .p{
+            margin-left: 10px;
+            background-color: #ae3eff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        p:hover{
+            background-color: #000000;
+        }
+        
+        p.selecionado {
+            background-color: #5c039b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        p:not(.selecionado) {
+            background-color: #ececec;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    }
+
+    .HistoricoEOpcoes h2,
+    .HistoricoEOpcoes p{
+        font-family: "Questrial", sans-serif;
+        font-weight: 100;
+    }
+}
+
+.ResumoLista{
+    height: 220px;
+    overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(131, 131, 131, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(68, 68, 68, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-family: "Questrial", sans-serif;
+    font-weight: 100;
+
+}
+
+.card p {
+    margin-bottom: 0;
+    font-family: "Questrial", sans-serif;
+}
+
+.card.deposito {
+    border-left: 5px #4B0082 solid; /* Cor para transações de depósito */
+}
+
+.card.resgate {
+    border-left: 5px #272727 solid; /* Cor para transações de depósito */
+}
+
+
+@media only screen and (max-width:1200px) {
+    .SaldoBank{
+        flex-direction: column;
+        width: 80%;
+        padding: 0px !important   ;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+
+        #limparHistorico{
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+    }
+
+    .formehistorico{
+        flex-direction: column;
+    }
+
+    .LeftForm{
+        width: 100% !important;
+
+    }
+
+    .RightHistorico{
+        width: 68% !important;
+        margin-top: 50px;
+        height: auto;
+
+        .RightResumo{
+            flex-direction: column;
+        }
+
+        .RightResumo p{
+            margin-bottom: 10px;
+
+        }
+    }
+
+}
+
+
+
+
+

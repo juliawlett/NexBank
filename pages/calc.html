@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBank</title>
+    <link rel="stylesheet" href="../assets/css/calc/style.css">
+    <link rel="stylesheet" href="../assets/css/global/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <!-- bootstrap icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="MenuNavbar">
+        <div class="Left">
+            <i class="bi bi-coin iconebank"></i>
+            <h1>NexBank</h1>
+        </div>
+
+        <div class="Right" id="logout">
+            <i class="bi bi-door-open iconebank"></i>
+            <p>Logout</p>
+        </div>
+    </div>
+
+    <div class="SaldoBank">
+        <p>Saldo Disponível: <span id="saldo">R$ 0,00</span></p>
+
+        <button id="limparHistorico"> <i class="bi bi-arrow-clockwise iconrefresh"></i> Limpar Histórico</button>
+        <!-- Novo botão para limpar histórico -->
+
+    </div>
+
+
+    <div class="formehistorico">
+        <div class="LeftForm">
+            <form id="operacoes">
+                <div class="Input">
+                    <label for="descricao">Descrição:</label> <!-- Novo campo de descrição -->
+                    <input type="text" id="descricao" placeholder="Ex: Compra de roupa no Shopping" required>
+                </div>
+
+                <div class="Input">
+                    <label for="valor">Valor:</label>
+                    <input type="number" id="valor" placeholder="Ex: 2.000" step="0.01" required>
+                </div>
+                <div class="Input">
+                    <label for="operacao">Operação:</label> <!-- Campo de seleção -->
+                    <select id="operacao">
+                        <option value="depositar">Depositar</option>
+                        <option value="resgatar">Resgatar</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="inserir">Inserir</button> <!-- Botão de inserir -->
+            </form>
+        </div>
+        <div class="RightHistorico">
+            <div class="HistoricoEOpcoes">
+                <div class="LeftResumo">
+                    <h2>Resumo</h2>
+                </div>
+
+                <div class="RightResumo">
+                    <p id="todosFilter" class="selecionado">Todos</p>
+                    <p id="depositarFilter">Depositar</p>
+                    <p id="resgatarFilter">Resgatar</p>
+                </div>
+                
+            </div>
+            <div class="ResumoLista">
+
+                <div id="historico">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/calc/calc.js"></script>
+</body>
+
+</html>
