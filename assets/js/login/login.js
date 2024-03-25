@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
                         duration: 3000,
                         onClose: function() {
-                            window.location.href = 'http://127.0.0.1:5500/pages/calc.html';
+                            window.location.href = '/pages/calc.html';
                         }
                     }).showToast();
                 } else {

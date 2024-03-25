@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const userDataJSON = localStorage.getItem('userData');
     if (!userDataJSON) {
         alert('Você precisa estar logado para acessar esta página.');
-        window.location.href = 'pagina_de_login.html'; // Redirecionar para a página de login
+        window.location.href = '/index.html'; // Redirecionar para a página de login
     }
 
     const userData = JSON.parse(userDataJSON);
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adicionar evento de clique para o logout
     logoutButton.addEventListener('click', function () {
         localStorage.removeItem('userData'); // Remover dados de autenticação do usuário
-        window.location.href = 'http://127.0.0.1:5500/pages/login.html'; // Redirecionar para a página de login
+        window.location.href = '/index.html'; // Redirecionar para a página de login
     });
 
 

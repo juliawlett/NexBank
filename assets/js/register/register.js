@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
                     duration: 5000, // Aumentei a duração para 5 segundos
                     onClose: function() {
-                        window.location.href = 'http://127.0.0.1:5500/pages/login.html';
+                        window.location.href = '/login.html';
                     }
                 }).showToast();
             } catch (error) {
