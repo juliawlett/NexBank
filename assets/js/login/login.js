@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         text: 'Login bem-sucedido!',
                         backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
                         duration: 3000,
-                        onClose: function() {
-                            window.location.href = '/pages/calc.html';
-                        }
                     }).showToast();
+
+                    window.location.href = '/pages/calc.html';
+
                 } else {
                     Toastify({
                         text: 'Email ou senha incorretos.',

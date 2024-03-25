@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: 'Registro concluído com sucesso! Acesse o login clicando na Logo "NexBank"',
                     backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
                     duration: 5000, // Aumentei a duração para 5 segundos
-                    onClose: function() {
-                        window.location.href = '/login.html';
-                    }
                 }).showToast();
+                
+                window.location.href = '/login.html';
+
             } catch (error) {
                 console.error('Erro ao salvar os dados no localStorage:', error);
                 Toastify({
