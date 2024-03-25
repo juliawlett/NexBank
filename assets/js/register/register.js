@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
                     duration: 5000, // Aumentei a duração para 5 segundos
                 }).showToast();
-                
-                window.location.href = '/login.html';
+
+                window.location.href = '../../../index.html';
 
             } catch (error) {
                 console.error('Erro ao salvar os dados no localStorage:', error);
